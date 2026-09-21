@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Quickie</title>
+  <link rel="stylesheet" href="./engine.css">
+  <link rel="stylesheet" href="./theme.css">
+</head>
+<body>
+  <div class="app">
+    <header class="toolbar">
+      <div class="brand">QUICKIE</div>
+
+      <div class="toolbar-group">
+        <button id="addText" type="button">+ Text</button>
+        <button id="addShape" type="button">+ Shape</button>
+      </div>
+
+      <div class="toolbar-spacer"></div>
+
+      <span id="status" class="status" aria-live="polite"></span>
+
+      <div class="toolbar-group">
+        <button id="saveDesign" type="button">Save</button>
+        <button id="loadDesign" type="button">Load</button>
+        <button id="resetDesign" type="button">Reset</button>
+
+        <label class="export-scale">
+          <span>PNG</span>
+          <select id="exportScale" aria-label="PNG export scale">
+            <option value="1">1×</option>
+            <option value="2" selected>2×</option>
+            <option value="3">3×</option>
+            <option value="4">4×</option>
+          </select>
+        </label>
+
+        <button id="exportPng" class="primary" type="button">Export</button>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <main class="stage">
+        <div id="artboardWrap" class="artboard-wrap">
+          <div id="artboard" class="artboard" aria-label="Typography canvas"></div>
+        </div>
+      </main>
+
+      <aside id="inspector" class="inspector" aria-label="Inspector"></aside>
+    </div>
+  </div>
+
+  <script src="./design.js"></script>
+  <script type="module" src="./engine.js"></script>
+</body>
+</html>
